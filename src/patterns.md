@@ -669,7 +669,9 @@ A struct pattern is refutable when one of its subpatterns is refutable.
 > &nbsp;&nbsp; [_PathInExpression_] `(` _TupleStructItems_<sup>?</sup> `)`
 >
 > _TupleStructItems_ :\
-> &nbsp;&nbsp; [_Pattern_]&nbsp;( `,` [_Pattern_] )<sup>\*</sup> `,`<sup>?</sup>
+> &nbsp;&nbsp; &nbsp;&nbsp; [_Pattern_] `,`\
+> &nbsp;&nbsp; | [_RestPattern_]\
+> &nbsp;&nbsp; | [_Pattern_]&nbsp;(`,` [_Pattern_])<sup>+</sup> `,`<sup>?</sup>
 
 Tuple struct patterns match tuple struct and enum values that match all criteria defined
 by its subpatterns. They are also used to [destructure](#destructuring) a tuple struct or
