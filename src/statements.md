@@ -5,8 +5,7 @@
 > &nbsp;&nbsp; &nbsp;&nbsp; `;`\
 > &nbsp;&nbsp; | [_Item_]\
 > &nbsp;&nbsp; | [_LetStatement_]\
-> &nbsp;&nbsp; | [_ExpressionStatement_]\
-> &nbsp;&nbsp; | [_MacroInvocationSemi_]
+> &nbsp;&nbsp; | [_ExpressionStatement_]<sub>_except [_MacroInvocation_] with curly brackets_</sub>
 
 
 A *statement* is a component of a [block], which is in turn a component of an
@@ -132,6 +131,7 @@ statement are [`cfg`], and [the lint check attributes].
 [_Expression_]: expressions.md
 [_Item_]: items.md
 [_LetStatement_]: #let-statements
+[_MacroInvocation_]: macros.md#macro-invocation
 [_MacroInvocationSemi_]: macros.md#macro-invocation
 [_OuterAttribute_]: attributes.md
 [_PatternNoTopAlt_]: patterns.md
